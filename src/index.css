@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Developer Portfolio Design System */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+    
+    /* Primary Brand - Professional Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+    
+    /* Secondary - Deep Tech Purple */
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Accent - Vibrant Cyan */
+    --accent: 189 94% 43%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Neutral Palette */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+    --muted: 220 13% 91%;
+    --muted-foreground: 215 16% 47%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    
+    /* Semantic Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Layout */
+    --radius: 0.75rem;
+    
+    /* Custom Gradients */
+    --gradient-brand: linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60% / 0.1), hsl(262 83% 58% / 0.05));
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(217 91% 70% / 0.3), transparent 70%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(217 91% 60% / 0.1);
+    --shadow-glow: 0 0 40px hsl(217 91% 70% / 0.4);
+    --shadow-card: 0 4px 12px hsl(215 25% 27% / 0.08);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Dark Theme */
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    
+    /* Adjusted Primary for Dark */
+    --primary: 217 91% 65%;
+    --primary-foreground: 224 71% 4%;
+    --primary-glow: 217 91% 75%;
+    
+    /* Enhanced Secondary */
+    --secondary: 262 83% 63%;
+    --secondary-foreground: 224 71% 4%;
+    
+    /* Bright Accent */
+    --accent: 189 94% 48%;
+    --accent-foreground: 224 71% 4%;
+    
+    /* Dark Neutrals */
+    --card: 224 71% 6%;
+    --card-foreground: 213 31% 91%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 11% 65%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    
+    /* Dark Gradients */
+    --gradient-brand: linear-gradient(135deg, hsl(217 91% 65%), hsl(262 83% 63%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 65% / 0.15), hsl(262 83% 63% / 0.08));
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(217 91% 75% / 0.2), transparent 70%);
+    
+    /* Dark Shadows */
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(217 91% 75% / 0.3);
+    --shadow-card: 0 4px 12px hsl(0 0% 0% / 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html, body, #root {
+    @apply w-full;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
